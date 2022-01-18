@@ -15,79 +15,84 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return Scaffold(
       backgroundColor: wHTCOLOUR,
       body: Padding(
-        padding: EdgeInsets.fromLTRB(40, 100, 40, 50),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              "Login",
-              style: w600(25, pRYCOLOUR),
-              textAlign: TextAlign.center,
+        padding: EdgeInsets.fromLTRB(40, 100, 40, 100),
+        child: Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset(
+                  "assets/logo.png",
+                  height: getScreenHeight(64),
+                  width: getScreenWidth(64),
+                ),
+                SizedBox(height: getScreenHeight(21)),
+                Text(
+                  "Login",
+                  style: w600(32, pRYCOLOUR),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: getScreenHeight(31)),
+                InputFields(
+                  label: "Username",
+                  hint: "greghu1379",
+                  iconz: Icon(null),
+                ),
+                SizedBox(height: getScreenHeight(31)),
+                InputFields(
+                  label: "Password",
+                  hint: "........",
+                  iconz: Icon(null),
+                  isPassword: true,
+                ),
+                SizedBox(height: getScreenHeight(31)),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: GestureDetector(
+                    onTap: () {
+                      RouteNavigators.routeNoWayHome(
+                        context,
+                        Forgot(),
+                      );
+                    },
+                    child: Text(
+                      "Forgot Password?",
+                      style: w400(15, pRYCOLOUR),
+                    ),
+                  ),
+                ),
+                SizedBox(height: getScreenHeight(41)),
+                MainButton(
+                    press: () {
+                      RouteNavigators.routeNoWayHome(
+                        context,
+                        Home(),
+                      );
+                    },
+                    text: "LOGIN",
+                    colour: pRYCOLOUR,
+                    txtcolour: wHTCOLOUR),
+                SizedBox(height: getScreenHeight(41)),
+                GestureDetector(
+                  onTap: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      Register(),
+                    );
+                  },
+                  child: Text(
+                    "Don’t have an account? Create one",
+                    style: w400(15, bLKCOLOUR),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
             ),
-            SizedBox(height: getScreenHeight(5)),
-            Text(
-              "Been a minute! How are you doing? 👋🏾 ",
-              style: w400(14, pRYCOLOUR),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: getScreenHeight(21)),
-            InputFields(
-              label: "Username",
-              hint: "greghu1379",
-              iconz: Icon(null),
-            ),
-            SizedBox(height: getScreenHeight(21)),
-            InputFields(
-              label: "Your pin",
-              hint: "........",
-              iconz: Icon(null),
-              isPassword: true,
-            ),
-            SizedBox(height: getScreenHeight(41)),
-            MainButton(
-                press: () {
-                  RouteNavigators.routeNoWayHome(
-                    context,
-                    Home(),
-                  );
-                },
-                text: "LOGIN",
-                colour: pRYCOLOUR,
-                txtcolour: wHTCOLOUR),
-            Spacer(),
-            GestureDetector(
-              onTap: () {
-                RouteNavigators.routeNoWayHome(
-                  context,
-                  Forgot(),
-                );
-              },
-              child: Text(
-                "Forgot Password?",
-                style: w400(15, pRYCOLOUR),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: getScreenHeight(7)),
-            GestureDetector(
-              onTap: () {
-                RouteNavigators.routeNoWayHome(
-                  context,
-                  Register(),
-                );
-              },
-              child: Text(
-                "Create a new account",
-                style: w400(15, pRYCOLOUR),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

@@ -16,65 +16,71 @@ class Register extends StatelessWidget {
     return Scaffold(
       backgroundColor: wHTCOLOUR,
       body: Padding(
-        padding: EdgeInsets.fromLTRB(40, 100, 40, 50),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              "Register",
-              style: w600(25, pRYCOLOUR),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: getScreenHeight(5)),
-            Text(
-              "Don’t go through the corners are you  ok ?  ",
-              style: w400(14, pRYCOLOUR),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: getScreenHeight(21)),
-            InputFields(
-              label: "Username",
-              hint: "greghu1379",
-              iconz: Icon(null),
-            ),
-            SizedBox(height: getScreenHeight(21)),
-            InputFields(
-              label: "Email Address",
-              hint: "greg@gmail.com",
-              iconz: Icon(null),
-            ),
-            SizedBox(height: getScreenHeight(21)),
-            InputFields(
-              label: "Your pin",
-              hint: "........",
-              iconz: Icon(null),
-              isPassword: true,
-            ),
-            SizedBox(height: getScreenHeight(41)),
-            MainButton(
-              press: () {},
-              text: "REGISTER",
-              colour: pRYCOLOUR,
-              txtcolour: wHTCOLOUR,
-            ),
-            SizedBox(height: getScreenHeight(21)),
-            Center(
-              child: GestureDetector(
-                onTap: () {
-                  RouteNavigators.routeNoWayHome(
-                    context,
-                    Login(),
-                  );
-                },
-                child: Text(
-                  "Already have an account",
-                  style: w400(15, pRYCOLOUR),
+        padding: EdgeInsets.fromLTRB(40, 100, 40, 100),
+        child: Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset(
+                  "assets/logo.png",
+                  height: getScreenHeight(64),
+                  width: getScreenWidth(64),
+                ),
+                SizedBox(height: getScreenHeight(21)),
+                Text(
+                  "Create Account",
+                  style: w600(32, pRYCOLOUR),
                   textAlign: TextAlign.center,
                 ),
-              ),
-            )
-          ],
+                SizedBox(height: getScreenHeight(31)),
+                InputFields(
+                  label: "Email address",
+                  hint: "greg@gmail.com",
+                  iconz: Icon(null),
+                ),
+                SizedBox(height: getScreenHeight(31)),
+                InputFields(
+                  label: "Create a username",
+                  hint: "greghu1379",
+                  iconz: Icon(null),
+                ),
+                SizedBox(height: getScreenHeight(31)),
+                InputFields(
+                  label: "Password",
+                  hint: "........",
+                  iconz: Icon(null),
+                  isPassword: true,
+                ),
+                SizedBox(height: getScreenHeight(41)),
+                MainButton(
+                    press: () {
+                      RouteNavigators.routeNoWayHome(
+                        context,
+                        Login(),
+                      );
+                    },
+                    text: "CONTINUE",
+                    colour: pRYCOLOUR,
+                    txtcolour: wHTCOLOUR),
+                SizedBox(height: getScreenHeight(41)),
+                GestureDetector(
+                  onTap: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      Login(),
+                    );
+                  },
+                  child: Text(
+                    "Already have an account ? Login",
+                    style: w400(15, bLKCOLOUR),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

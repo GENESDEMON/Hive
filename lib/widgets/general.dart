@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/size_config.dart';
 import 'package:hive/utils/text_style.dart';
@@ -43,7 +44,7 @@ class InputFields extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(7)),
             ),
             hintText: hint,
-            hintStyle: GoogleFonts.rubik(
+            hintStyle: GoogleFonts.inter(
               fontSize: getScreenHeight(14),
               fontWeight: FontWeight.w400,
               color: gRNCOLOUR,
@@ -87,7 +88,7 @@ class MainButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: GoogleFonts.rubik(
+            style: GoogleFonts.inter(
               fontSize: getScreenHeight(16),
               fontWeight: FontWeight.w500,
               color: txtcolour,
@@ -130,7 +131,7 @@ class Options extends StatelessWidget {
                 children: [
                   Text(
                     text1,
-                    style: GoogleFonts.rubik(
+                    style: GoogleFonts.inter(
                       fontSize: getScreenHeight(16),
                       fontWeight: FontWeight.w500,
                       color: pRYCOLOUR,
@@ -139,7 +140,7 @@ class Options extends StatelessWidget {
                   SizedBox(height: getScreenHeight(7)),
                   Text(
                     text2,
-                    style: GoogleFonts.rubik(
+                    style: GoogleFonts.inter(
                       fontSize: getScreenHeight(13),
                       fontWeight: FontWeight.w400,
                       color: subcolor,

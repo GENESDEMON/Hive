@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/enum.dart';
 import 'package:hive/utils/size_config.dart';
@@ -56,7 +57,7 @@ class CustomBottomNav extends StatelessWidget {
                 ),
                 Text(
                   "Home",
-                  style: GoogleFonts.rubik(
+                  style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.home == selectedMenu
                         ? wHTCOLOUR
@@ -83,7 +84,7 @@ class CustomBottomNav extends StatelessWidget {
                 ),
                 Text(
                   "Groups",
-                  style: GoogleFonts.rubik(
+                  style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.groups == selectedMenu
                         ? wHTCOLOUR
@@ -110,7 +111,7 @@ class CustomBottomNav extends StatelessWidget {
                 ),
                 Text(
                   "Resources",
-                  style: GoogleFonts.rubik(
+                  style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.resources == selectedMenu
                         ? wHTCOLOUR
@@ -137,7 +138,7 @@ class CustomBottomNav extends StatelessWidget {
                 ),
                 Text(
                   "More",
-                  style: GoogleFonts.rubik(
+                  style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.more == selectedMenu
                         ? wHTCOLOUR

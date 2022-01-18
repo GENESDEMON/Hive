@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/utils/size_config.dart';
 
 TextStyle bold(
@@ -6,7 +7,7 @@ TextStyle bold(
   Color color, {
   TextDecoration? decoration,
 }) {
-  return GoogleFonts.poppins(
+  return GoogleFonts.inter(
     fontSize: size,
     color: color,
     fontWeight: FontWeight.bold,
@@ -20,7 +21,7 @@ TextStyle normal(
   Color color, {
   TextDecoration? decoration,
 }) {
-  return GoogleFonts.poppins(
+  return GoogleFonts.inter(
     fontSize: size,
     color: color,
     fontWeight: FontWeight.normal,
@@ -34,7 +35,7 @@ TextStyle w600(
   Color color, {
   TextDecoration? decoration,
 }) {
-  return GoogleFonts.poppins(
+  return GoogleFonts.inter(
     fontSize: size,
     color: color,
     fontWeight: FontWeight.w600,
@@ -48,7 +49,7 @@ TextStyle w500(
   Color color, {
   TextDecoration? decoration,
 }) {
-  return GoogleFonts.poppins(
+  return GoogleFonts.inter(
     fontSize: size,
     color: color,
     fontWeight: FontWeight.w500,
@@ -62,7 +63,7 @@ TextStyle w400(
   Color color, {
   TextDecoration? decoration,
 }) {
-  return GoogleFonts.poppins(
+  return GoogleFonts.inter(
     fontSize: size,
     color: color,
     fontWeight: FontWeight.w400,
@@ -78,7 +79,7 @@ TextStyle w300(
   Color color, {
   TextDecoration? decoration,
 }) {
-  return GoogleFonts.poppins(
+  return GoogleFonts.inter(
     fontSize: size,
     color: color,
     fontWeight: FontWeight.w300,

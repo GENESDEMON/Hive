@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/routes.dart';
 import 'package:hive/utils/size_config.dart';
-import 'package:hive/views/auth/home.dart';
 import 'package:hive/views/auth/login.dart';
 import 'package:hive/views/auth/register.dart';
 import 'package:hive/widgets/general.dart';
@@ -23,8 +23,8 @@ class Onboard extends StatelessWidget {
               image: DecorationImage(
                 image: const AssetImage("assets/onb.png"),
                 fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                    const Color(0xff181726).withOpacity(0.2), BlendMode.hue),
+                colorFilter:
+                    ColorFilter.mode(const Color(0xff000000), BlendMode.hue),
               ),
             ),
           ),
@@ -39,8 +39,8 @@ class Onboard extends StatelessWidget {
                     Text(
                       "Having a difficult day? Find someone who understands.",
                       style: GoogleFonts.inter(
-                        fontSize: getScreenHeight(37),
-                        fontWeight: FontWeight.w900,
+                        fontSize: getScreenHeight(33),
+                        fontWeight: FontWeight.w700,
                         color: Colors.white,
                       ),
                     ),
