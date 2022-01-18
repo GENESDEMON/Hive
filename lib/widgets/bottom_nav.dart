@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/enum.dart';
+import 'package:hive/utils/routes.dart';
 import 'package:hive/utils/size_config.dart';
+import 'package:hive/views/tabs/groups.dart';
+import 'package:hive/views/tabs/home.dart';
+import 'package:hive/views/tabs/more.dart';
+import 'package:hive/views/tabs/resources.dart';
 
 class CustomBottomNav extends StatelessWidget {
   const CustomBottomNav({
@@ -16,12 +21,12 @@ class CustomBottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //for when the menu option is not clicked
-    final Color inActiveIconColor = wHTCOLOUR.withOpacity(0.5);
+    final Color inActiveIconColor = bLKCOLOUR.withOpacity(0.5);
     return Container(
       height: getScreenHeight(80),
       padding: EdgeInsets.symmetric(horizontal: 17),
       decoration: BoxDecoration(
-        color: pRYCOLOUR,
+        color: wHTCOLOUR,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(17),
           topRight: Radius.circular(17),
@@ -50,18 +55,23 @@ class CustomBottomNav extends StatelessWidget {
                     Icons.home,
                     size: 20,
                     color: Menu.home == selectedMenu
-                        ? wHTCOLOUR
+                        ? pRYCOLOUR
                         : inActiveIconColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      Home(),
+                    );
+                  },
                 ),
                 Text(
                   "Home",
                   style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.home == selectedMenu
-                        ? wHTCOLOUR
-                        : wHTCOLOUR.withOpacity(0.5),
+                        ? pRYCOLOUR
+                        : bLKCOLOUR.withOpacity(0.5),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -74,21 +84,26 @@ class CustomBottomNav extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(
-                    Icons.chat_bubble_outline,
+                    Icons.people,
                     size: 20,
                     color: Menu.groups == selectedMenu
-                        ? wHTCOLOUR
+                        ? pRYCOLOUR
                         : inActiveIconColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      Groups(),
+                    );
+                  },
                 ),
                 Text(
                   "Groups",
                   style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.groups == selectedMenu
-                        ? wHTCOLOUR
-                        : wHTCOLOUR.withOpacity(0.5),
+                        ? pRYCOLOUR
+                        : bLKCOLOUR.withOpacity(0.5),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -101,21 +116,26 @@ class CustomBottomNav extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(
-                    Icons.chat_bubble_outline,
+                    Icons.folder,
                     size: 20,
-                    color: Menu.groups == selectedMenu
-                        ? wHTCOLOUR
+                    color: Menu.resources == selectedMenu
+                        ? pRYCOLOUR
                         : inActiveIconColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      Resources(),
+                    );
+                  },
                 ),
                 Text(
                   "Resources",
                   style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.resources == selectedMenu
-                        ? wHTCOLOUR
-                        : wHTCOLOUR.withOpacity(0.5),
+                        ? pRYCOLOUR
+                        : bLKCOLOUR.withOpacity(0.5),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -128,21 +148,26 @@ class CustomBottomNav extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(
-                    Icons.more_horiz,
+                    Icons.menu,
                     size: 20,
                     color: Menu.more == selectedMenu
-                        ? wHTCOLOUR
+                        ? pRYCOLOUR
                         : inActiveIconColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      More(),
+                    );
+                  },
                 ),
                 Text(
                   "More",
                   style: GoogleFonts.inter(
                     fontSize: getScreenWidth(10),
                     color: Menu.more == selectedMenu
-                        ? wHTCOLOUR
-                        : wHTCOLOUR.withOpacity(0.5),
+                        ? pRYCOLOUR
+                        : bLKCOLOUR.withOpacity(0.5),
                     fontWeight: FontWeight.w500,
                   ),
                 ),

@@ -5,7 +5,7 @@ import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/routes.dart';
 import 'package:hive/utils/size_config.dart';
 import 'package:hive/utils/text_style.dart';
-import 'package:hive/views/auth/home.dart';
+import 'package:hive/views/tabs/home.dart';
 import 'package:hive/views/auth/register.dart';
 import 'package:hive/views/auth/reset.dart';
 import 'package:hive/widgets/general.dart';

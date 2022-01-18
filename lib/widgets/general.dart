@@ -104,12 +104,10 @@ class Options extends StatelessWidget {
   const Options({
     Key? key,
     required this.text1,
-    required this.text2,
     required this.subcolor,
     required this.press,
   }) : super(key: key);
   final String text1;
-  final String text2;
   final Color subcolor;
   final void Function()? press;
 
@@ -134,15 +132,6 @@ class Options extends StatelessWidget {
                     style: GoogleFonts.inter(
                       fontSize: getScreenHeight(16),
                       fontWeight: FontWeight.w500,
-                      color: pRYCOLOUR,
-                    ),
-                  ),
-                  SizedBox(height: getScreenHeight(7)),
-                  Text(
-                    text2,
-                    style: GoogleFonts.inter(
-                      fontSize: getScreenHeight(13),
-                      fontWeight: FontWeight.w400,
                       color: subcolor,
                     ),
                   ),
@@ -150,16 +139,12 @@ class Options extends StatelessWidget {
               ),
               Icon(
                 Icons.arrow_forward_ios,
-                color: pRYCOLOUR,
-                size: getScreenHeight(17),
+                color: bLKCOLOUR,
+                size: getScreenHeight(13),
               ),
             ],
           ),
           SizedBox(height: getScreenHeight(13)),
-          Divider(
-            color: pRYCOLOUR.withOpacity(0.3),
-            height: getScreenHeight(0.2),
-          ),
         ],
       ),
     );
