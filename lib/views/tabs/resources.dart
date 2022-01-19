@@ -18,24 +18,60 @@ class Resources extends StatelessWidget {
         selectedMenu: Menu.resources,
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(40, 100, 40, 50),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              "Hi Greg,",
-              style: w600(19, pRYCOLOUR),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: getScreenHeight(10)),
-            Text(
-              " I hope you have more sunshine than clouds today",
-              style: w400(14, bLKCOLOUR),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: getScreenHeight(10)),
-          ],
+        padding: EdgeInsets.fromLTRB(40, 100, 40, 0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                "Resources",
+                style: w600(19, pRYCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: getScreenHeight(10)),
+              Text(
+                "Here is a collection of articles, books and links to materials that could be helpful.",
+                style: w400(14, bLKCOLOUR),
+              ),
+              SizedBox(height: getScreenHeight(40)),
+              Text(
+                "Books",
+                style: w600(14, bLKCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: getScreenHeight(10)),
+              Image.asset("assets/3.png"),
+              SizedBox(height: getScreenHeight(7)),
+              Image.asset("assets/3.png"),
+              SizedBox(height: getScreenHeight(7)),
+              Image.asset("assets/3.png"),
+              SizedBox(height: getScreenHeight(20)),
+              Text(
+                "Videos",
+                style: w600(14, bLKCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: getScreenHeight(10)),
+              Image.asset("assets/2.png"),
+              SizedBox(height: getScreenHeight(7)),
+              Image.asset("assets/2.png"),
+              SizedBox(height: getScreenHeight(7)),
+              Image.asset("assets/2.png"),
+              SizedBox(height: getScreenHeight(40)),
+              Text(
+                "Podcasts",
+                style: w600(14, bLKCOLOUR),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: getScreenHeight(10)),
+              Image.asset("assets/1.png"),
+              SizedBox(height: getScreenHeight(7)),
+              Image.asset("assets/1.png"),
+              SizedBox(height: getScreenHeight(7)),
+              Image.asset("assets/1.png"),
+            ],
+          ),
         ),
       ),
     );

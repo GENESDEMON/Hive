@@ -18,7 +18,7 @@ class Groups extends StatelessWidget {
         selectedMenu: Menu.groups,
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(40, 100, 40, 50),
+        padding: EdgeInsets.fromLTRB(40, 100, 40, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +34,78 @@ class Groups extends StatelessWidget {
               style: w400(14, bLKCOLOUR),
               textAlign: TextAlign.center,
             ),
+            SizedBox(height: getScreenHeight(40)),
+            Container(
+                decoration: BoxDecoration(
+                  color: pRYCOLOUR.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(7),
+                ),
+                child: Image.asset("assets/g1.png")),
+            SizedBox(height: getScreenHeight(40)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Your groups",
+                  style: w600(14, bLKCOLOUR),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  "view all",
+                  style: w400(14, bLKCOLOUR),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
             SizedBox(height: getScreenHeight(10)),
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/g2.png"),
+                  Image.asset("assets/g2.png"),
+                ],
+              ),
+            ),
+            SizedBox(height: getScreenHeight(40)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Popular groups",
+                  style: w600(14, bLKCOLOUR),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  "view all",
+                  style: w400(14, bLKCOLOUR),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+            SizedBox(height: getScreenHeight(10)),
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/g2.png"),
+                  Image.asset("assets/g2.png"),
+                ],
+              ),
+            ),
+            SizedBox(height: getScreenHeight(25)),
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/g2.png"),
+                  Image.asset("assets/g2.png"),
+                ],
+              ),
+            ),
           ],
         ),
       ),
