@@ -3,8 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/enum.dart';
+import 'package:hive/utils/routes.dart';
 import 'package:hive/utils/size_config.dart';
 import 'package:hive/utils/text_style.dart';
+import 'package:hive/views/tabs/create_group.dart';
+import 'package:hive/views/tabs/more.dart';
 import 'package:hive/widgets/bottom_nav.dart';
 
 class Groups extends StatelessWidget {
@@ -40,7 +43,14 @@ class Groups extends StatelessWidget {
                   color: pRYCOLOUR.withOpacity(0.8),
                   borderRadius: BorderRadius.circular(7),
                 ),
-                child: Image.asset("assets/g1.png")),
+                child: GestureDetector(
+                    onTap: () {
+                      RouteNavigators.routeNoWayHome(
+                        context,
+                        CreateGroup(),
+                      );
+                    },
+                    child: Image.asset("assets/g1.png"))),
             SizedBox(height: getScreenHeight(40)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
