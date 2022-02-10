@@ -5,6 +5,7 @@ import 'package:hive/utils/colours.dart';
 import 'package:hive/utils/routes.dart';
 import 'package:hive/utils/size_config.dart';
 import 'package:hive/utils/text_style.dart';
+import 'package:hive/views/groups/success.dart';
 import 'package:hive/views/tabs/groups.dart';
 import 'package:hive/widgets/general.dart';
 
@@ -66,8 +67,19 @@ class CreateGroup extends StatelessWidget {
                 iconz: Icon(null),
               ),
               SizedBox(height: getScreenHeight(31)),
+              InputFields(
+                label: "Group Image link",
+                hint: "",
+                iconz: Icon(null),
+              ),
+              SizedBox(height: getScreenHeight(31)),
               MainButton(
-                  press: () {},
+                  press: () {
+                    RouteNavigators.routeNoWayHome(
+                      context,
+                      Success(),
+                    );
+                  },
                   text: "CREATE GROUP",
                   colour: pRYCOLOUR,
                   txtcolour: wHTCOLOUR),

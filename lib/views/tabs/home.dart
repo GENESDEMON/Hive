@@ -6,6 +6,7 @@ import 'package:hive/utils/enum.dart';
 import 'package:hive/utils/size_config.dart';
 import 'package:hive/utils/text_style.dart';
 import 'package:hive/widgets/bottom_nav.dart';
+import 'package:hive/widgets/general.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -35,32 +36,56 @@ class Home extends StatelessWidget {
                 style: w400(14, bLKCOLOUR),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: getScreenHeight(60)),
-              Container(
-                  decoration: BoxDecoration(
-                    color: pRYCOLOUR.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(7),
-                  ),
-                  child: Image.asset("assets/search.png")),
               SizedBox(height: getScreenHeight(40)),
-              Container(
-                  decoration: BoxDecoration(
-                    color: pRYCOLOUR.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(7),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Your groups",
+                    style: w600(14, bLKCOLOUR),
+                    textAlign: TextAlign.center,
                   ),
-                  child: Image.asset("assets/quote.png")),
-              SizedBox(height: getScreenHeight(40)),
-              Text(
-                "Recommended resources",
-                style: w600(14, bLKCOLOUR),
-                textAlign: TextAlign.center,
+                  Text(
+                    "view all",
+                    style: w400(14, bLKCOLOUR),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              GridView.count(
+                primary: true,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                crossAxisCount: 2,
+                mainAxisSpacing: getScreenHeight(9.0),
+                crossAxisSpacing: getScreenWidth(13.0),
+                children: <Widget>[
+                  GroupCard(),
+                  GroupCard(),
+                ],
+              ),
+              SizedBox(height: getScreenHeight(20)),
+              ResourceCard(
+                name: 'On life being life',
+                size: '43 pages',
+                owner: 'Arthur Barracuda',
+                link: 'https://doi.apa.org/fulltext/2018-00750-003.html',
+                iconz: Icon(
+                  Icons.book,
+                  color: pRYCOLOUR,
+                ),
               ),
               SizedBox(height: getScreenHeight(10)),
-              Image.asset("assets/1.png"),
-              SizedBox(height: getScreenHeight(7)),
-              Image.asset("assets/2.png"),
-              SizedBox(height: getScreenHeight(7)),
-              Image.asset("assets/3.png"),
+              ResourceCard(
+                name: 'Learning how to deal with drama',
+                size: '905 pages',
+                owner: 'Arthur Barracuda',
+                link: 'https://doi.apa.org/fulltext/2018-00750-003.html',
+                iconz: Icon(
+                  Icons.book,
+                  color: pRYCOLOUR,
+                ),
+              ),
             ],
           ),
         ),
